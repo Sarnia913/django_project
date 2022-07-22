@@ -38,8 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sarnia.apps.SarniaConfig',
-    'projects.apps.ProjectsConfig',
-    'project.apps.ProjectConfig'
+    'projects.apps.ProjectsConfig'
 
 ]
 
