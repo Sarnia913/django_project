@@ -5,9 +5,12 @@
     <title>projects</title>
 </head>
 <body>
-{% include 'navbar.html' %}
+{% extends 'main.html' %}
+{% block content %}
+
 <h1>text analysis</h1>
 Text analysis (TA) is a machine learning technique used to automatically extract valuable insights from unstructured text data.<br>
 Companies use text analysis tools to quickly digest online data and documents, and transform them into actionable insights.
+{% endblock content %}
 </body>
 </html>
