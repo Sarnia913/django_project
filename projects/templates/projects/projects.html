@@ -14,9 +14,12 @@
 {% else %}
     <p>number is less than 10.</p>
  {% endif %}
-<h1>text analysis</h1>
-Text analysis (TA) is a machine learning technique used to automatically extract valuable insights from unstructured text data.<br>
-Companies use text analysis tools to quickly digest online data and documents, and transform them into actionable insights.
+<h1>projects</h1>
+<ul>
+{% for project in projects %}
+   <li>title:{{ project.title }}-->{{ project.desc }}</li>
+{% endfor %}
+</ul>
 {% endblock content %}
 </body>
 </html>
