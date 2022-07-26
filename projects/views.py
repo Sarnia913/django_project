@@ -19,4 +19,9 @@ def projects(request):
     context={'page':page,'number':number,'projects':projectslist}
     return render(request, './projects/projects.html',context)
 def project(request,pk):
-    return render(request, './projects/single-project.html',{'num':pk})
+    projectobj=None
+    for proj in projectslist:
+        if proj['id']==int(pk):
+            projectobj=proj
+    context={'num':pk,'project':projectobj}
+    return render(request, './projects/single-project.html',context)

@@ -7,8 +7,9 @@
 <body>
 {% extends 'main.html' %}
 {% block content %}
-    {{ num }}
-Data science is an interdisciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from noisy,<br> structured and unstructured data, and apply knowledge from data across a broad range of application domains.
+   <h1>project{{ num }}</h1>
+project:{{ project.title }}
+    <li>description:{{ project.desc }}</li>
 {% endblock content %}
 </body>
 </html>
