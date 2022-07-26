@@ -11,6 +11,7 @@
 project:{{ project.title }}
     <li>description:{{ project.desc }}</li>
     <a href="/project/{{ project.id }}">link</a>
+    <a href="{% url 'project' project.id %} ">link</a>
 {% endblock content %}
 </body>
 </html>
