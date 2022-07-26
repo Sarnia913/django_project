@@ -17,7 +17,7 @@
 <h1>projects</h1>
 <ul>
 {% for project in projects %}
-   <li>title:{{ project.title }}-->{{ project.desc }}</li>
+    <li>title:<a href="{% url 'project' project.id %}">{{project.title  }}</a>-->{{ project.desc }}</li>
 {% endfor %}
 </ul>
 {% endblock content %}
