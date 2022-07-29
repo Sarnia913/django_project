@@ -7,19 +7,28 @@
 <body>
 {% extends 'main.html' %}
 {% block content %}
-{% if number > 10 %}
-    <p>number is greater than 10.</p>
-{% elif number == 10 %}
-     <p>number is equal to 10.</p>
-{% else %}
-    <p>number is less than 10.</p>
- {% endif %}
-<h1>projects</h1>
-<ul>
-{% for project in projects %}
-    <li>title:<a href="{% url 'project' project.id %}">{{project.title  }}</a>-->{{ project.desc }}</li>
-{% endfor %}
-</ul>
+
+<h1>Projects</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Project</th>
+        <th>Votes</th>
+        <th>Ratio</th>
+        <th></th>
+    </tr>
+    {% for project in projects%}
+        <tr>
+            <td>{{ project.id }}</td>
+            <td>{{ project.title }}</td>
+            <td>{{ project.vote_total }}</td>
+            <td>{{ project.vote_ratio }}%</td>
+            <td><a href="{% url 'project' project.id %}">View</a> </td>
+        </tr>
+    {% endfor %}
+</table>
+
 {% endblock content %}
 </body>
 </html>

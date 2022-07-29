@@ -8,10 +8,10 @@
 {% extends 'main.html' %}
 {% block content %}
    <h1>project{{ num }}</h1>
-project:{{ project.title }}
-    <li>description:{{ project.desc }}</li>
-    <a href="/project/{{ project.id }}">link</a>
-    <a href="{% url 'project' project.id %} ">link</a>
+project:{{ projectobj.title }}
+    <li>description:{{ projectobj.desc }}</li>
+    <a href="/project/{{ projectobj.id }}">link</a>
+    <a href="{% url 'project' projectobj.id %} ">link</a>
 {% endblock content %}
 </body>
 </html>
