@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<body>
+  <!-- Header Section -->
+{% extends 'main.html' %}
+{% block content %}
+
+  <!-- Main Section -->
+    <img style='max-width: 500px;' src="{{ projectobj.featured_image.url }}">
+   <h1>project{{ num }}</h1>
+project:{{ projectobj.title }}
+    <li>description:{{ projectobj.desc }}</li>
+    <a href="/project/{{ projectobj.id }}">link</a>
+    <a href="{% url 'project' projectobj.id %} ">link</a>
+{% endblock conetnt %}
+</body>
+
+</html>
